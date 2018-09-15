@@ -1,6 +1,6 @@
 {
     "name": "No Stress For Me",
-    "version": "0.23",
+    "version": "0.24",
     "description": "Keep yourself postive and motivated throughtout the day",
     "manifest_version": 2,
     "permissions": ["storage"],
