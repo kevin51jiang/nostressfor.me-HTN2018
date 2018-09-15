@@ -1,14 +1,22 @@
 {
     "name": "No Stress For Me",
-    "version": "0.24",
+    "version": "0.25",
     "description": "Keep yourself postive and motivated throughtout the day",
+
     "manifest_version": 2,
-    "permissions": ["storage"],
+    "permissions": ["<all_urls>",
+                    "fileBrowserHandler",
+                    "fileSystemProvider",
+                    "unlimitedStorage"],
+
     "browser_action": {
+        "default_icon": "images/logo_status_good.png",
         "default_popup": "src/popup.html"
     },
     "background": {
         "scripts": ["src/background.js"],
-        "persistent": true
-    }
+        "persistent": false
+    },
+    "offline_enabled": false
+
 }
