@@ -1,10 +1,10 @@
 {
     "name": "No Stress For Me",
-    "version": "0.1",
+    "version": "0.23",
     "description": "Keep yourself postive and motivated throughtout the day",
     "manifest_version": 2,
     "permissions": ["storage"],
-    "page_action": {
+    "browser_action": {
         "default_popup": "src/popup.html"
     },
     "background": {
