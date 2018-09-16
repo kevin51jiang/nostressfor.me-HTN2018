@@ -1,0 +1,18 @@
+{
+  "Mac" : [
+    {
+      "name" : "AXSwift",
+      "hash" : "a0df36cfc3b3a72fdbb5250808cccc208c88016da8c4bfe19b646000fd49f542"
+    }
+  ],
+  "watchOS" : [
+
+  ],
+  "tvOS" : [
+
+  ],
+  "commitish" : "0.2.2",
+  "iOS" : [
+
+  ]
+}

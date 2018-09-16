@@ -1,0 +1,11 @@
+framework module PublicSuffix {
+  umbrella header "PublicSuffix.h"
+
+  export *
+  module * { export * }
+}
+
+module PublicSuffix.Swift {
+    header "PublicSuffix-Swift.h"
+    requires objc
+}

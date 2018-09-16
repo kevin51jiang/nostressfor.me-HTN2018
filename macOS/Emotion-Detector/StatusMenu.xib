@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14313.13.2" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14313.13.2"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
+            <connections>
+                <outlet property="delegate" destination="3O6-DG-Gub" id="eYo-uK-7ek"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
+        <customObject id="3O6-DG-Gub" customClass="AppDelegate" customModule="Emotion_Detector" customModuleProvider="target">
+            <connections>
+                <outlet property="statusMenu" destination="cIc-YM-kj6" id="Rf1-F7-R36"/>
+            </connections>
+        </customObject>
+        <customObject id="e1l-dm-PgC" customClass="StatusMenuController" customModule="Emotion_Detector" customModuleProvider="target">
+            <connections>
+                <outlet property="statusMenu" destination="cIc-YM-kj6" id="l7a-2k-hfo"/>
+                <outlet property="websiteMenuItem" destination="E0M-aB-ATB" id="xBI-6i-BuK"/>
+            </connections>
+        </customObject>
+        <menu id="cIc-YM-kj6">
+            <items>
+                <menuItem title="Website" id="E0M-aB-ATB">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                </menuItem>
+                <menuItem title="Quit" id="56w-dX-dMK">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="quitClicked:" target="e1l-dm-PgC" id="DPi-cp-MSg"/>
+                    </connections>
+                </menuItem>
+            </items>
+            <point key="canvasLocation" x="62.5" y="-61"/>
+        </menu>
+    </objects>
+</document>
