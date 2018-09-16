@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		430A019D214DD360007838D9 /* Prefs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430A019C214DD360007838D9 /* Prefs.swift */; };
+		433FC4EB214E18E6000FA030 /* AVCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433FC4EA214E18E6000FA030 /* AVCapture.swift */; };
+		433FC4ED214E26A0000FA030 /* AzureClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433FC4EC214E26A0000FA030 /* AzureClient.swift */; };
 		438E2709214D9E0F00A93FC1 /* ScriptingBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438E2708214D9E0F00A93FC1 /* ScriptingBridge.swift */; };
 		438E270B214D9E6D00A93FC1 /* ScriptingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438E270A214D9E6D00A93FC1 /* ScriptingManager.swift */; };
 		43E35570214D90E500649294 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E3556F214D90E500649294 /* AppDelegate.swift */; };
@@ -38,6 +40,8 @@
 /* Begin PBXFileReference section */
 		430A019C214DD360007838D9 /* Prefs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prefs.swift; sourceTree = "<group>"; };
 		433FC4E9214DEB1E000FA030 /* Emotion-Detector.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Emotion-Detector.entitlements"; sourceTree = "<group>"; };
+		433FC4EA214E18E6000FA030 /* AVCapture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVCapture.swift; sourceTree = "<group>"; };
+		433FC4EC214E26A0000FA030 /* AzureClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AzureClient.swift; sourceTree = "<group>"; };
 		438E2708214D9E0F00A93FC1 /* ScriptingBridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScriptingBridge.swift; sourceTree = "<group>"; };
 		438E270A214D9E6D00A93FC1 /* ScriptingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScriptingManager.swift; sourceTree = "<group>"; };
 		43E3556C214D90E500649294 /* Emotion-Detector.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Emotion-Detector.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -100,6 +104,8 @@
 				430A019C214DD360007838D9 /* Prefs.swift */,
 				438E2708214D9E0F00A93FC1 /* ScriptingBridge.swift */,
 				438E270A214D9E6D00A93FC1 /* ScriptingManager.swift */,
+				433FC4EA214E18E6000FA030 /* AVCapture.swift */,
+				433FC4EC214E26A0000FA030 /* AzureClient.swift */,
 				43E35571214D90E700649294 /* Assets.xcassets */,
 				43E35576214D90E700649294 /* Info.plist */,
 				43E35577214D90E700649294 /* Emotion_Detector.entitlements */,
@@ -183,7 +189,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				433FC4ED214E26A0000FA030 /* AzureClient.swift in Sources */,
 				43E35580214D960C00649294 /* StatusMenuController.swift in Sources */,
+				433FC4EB214E18E6000FA030 /* AVCapture.swift in Sources */,
 				43E35570214D90E500649294 /* AppDelegate.swift in Sources */,
 				430A019D214DD360007838D9 /* Prefs.swift in Sources */,
 				438E270B214D9E6D00A93FC1 /* ScriptingManager.swift in Sources */,
