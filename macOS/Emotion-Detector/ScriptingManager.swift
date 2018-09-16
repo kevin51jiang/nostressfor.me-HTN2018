@@ -104,11 +104,7 @@ enum ScriptingManager {
         
         do {
             try startBrowserWatcher(pid) {
-                let timer = DispatchSource.makeTimerSource()
-                timer.schedule(deadline: .now() + 10)
-                timer.setEventHandler(handler: {
-                    AVCapture.takePhoto()
-                })
+                AVCapture.takePhoto()
             }
         } catch let error {
             NSLog("Error: Could not watch app [\(pid)]: \(error)")
