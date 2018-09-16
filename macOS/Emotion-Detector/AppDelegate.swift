@@ -18,14 +18,14 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     let statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
     
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        
+        statusItem.menu = statusMenu
         let icon = #imageLiteral(resourceName: "menuIcon")
         icon.isTemplate = true
         DispatchQueue.main.async {
             self.statusItem.button?.image = icon
         }
-        statusItem.menu = statusMenu
-//        statusItem.title = "test"
+        
+        ScriptingManager.initialize()
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {

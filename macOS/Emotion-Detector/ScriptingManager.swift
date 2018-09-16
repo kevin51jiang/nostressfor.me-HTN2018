@@ -43,6 +43,12 @@ enum SupportedBrowser: BundleIdentifier {
 
 
 enum ScriptingManager {
+    static func initialize() {
+        NSWorkspace.shared.notificationCenter.addObserver(forName: NSWorkspace.didActivateApplicationNotification, object: nil, queue: nil) {
+            appSwitched(notification: $0)
+        }
+    }
+    
     static var currentApp: NSRunningApplication? {
         return NSWorkspace.shared.menuBarOwningApplication
     }
@@ -89,10 +95,20 @@ enum ScriptingManager {
     }
     
     
-    static func updateForSupportedBrowser() {
-        guard let pid = NSWorkspace.shared.menuBarOwningApplication?.processIdentifier else { return }
+    static func appSwitched(notification: Notification) {
+        guard let app = NSWorkspace.shared.menuBarOwningApplication else { return }
+        let pid = app.processIdentifier
+        if !currrentAppIsSupportedBrowser {
+            return
+        }
         
-        
+        do {
+            try startBrowserWatcher(pid) {
+                //TODO
+            }
+        } catch let error {
+            NSLog("Error: Could not watch app [\(pid)]: \(error)")
+        }
     }
     
     private static func startBrowserWatcher(_ processIdentifier: pid_t, callback: @escaping () -> Void) throws {
@@ -149,12 +165,5 @@ enum ScriptingManager {
             tab = window.activeTab
         }
         return tab?.URL.flatMap(URL.init(string:))
-    }
-    
-    private static func registerWindow(_ window: AXUIElement, forNotificationsUsing observer: AXObserver, userInfo: UnsafeMutableRawPointer?) {
-        AXObserverAddNotification(observer, window, kAXWindowCreatedNotification as CFString, userInfo)
-        AXObserverAddNotification(observer, window, kAXTitleChangedNotification as CFString, userInfo)
-        AXObserverAddNotification(observer, window, kAXFocusedWindowChangedNotification as CFString, userInfo)
-        CFRunLoopAddSource(CFRunLoopGetCurrent(), AXObserverGetRunLoopSource(observer), .defaultMode)
     }
 }
