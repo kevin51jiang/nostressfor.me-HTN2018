@@ -20,6 +20,8 @@ class StatusMenuController: NSObject, NSMenuDelegate {
     
     func menuWillOpen(_ menu: NSMenu) {
         websiteMenuItem.title = ScriptingManager.currentDomain ?? "No website"
+        
+        AVCapture.takePhoto()
     }
     
     @IBAction func quitClicked(_ sender: Any) {

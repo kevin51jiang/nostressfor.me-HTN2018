@@ -26,6 +26,20 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
         
         ScriptingManager.initialize()
+        
+        let image = CIImage(contentsOf: URL(fileURLWithPath: "/Users/Nate/Downloads/test.jpg"))
+        AzureClient.getExpressionInfo(image: image!) { _ in
+            print("completion")
+        }
+        
+        let asdf = Website(expression: Expression(anger: 0.5, contempt: 1, disgust: 0.2, fear: 0.5, neutral: 0.8, sadness: 0.123, surprise: 0), domain: "google.com")
+        let jkl = Website(expression: Expression(anger: 0.1, contempt: 1, disgust: 0.2, fear: 0.5, neutral: 0.8, sadness: 0.123, surprise: 0), domain: "bing.com")
+        DataManager.initialize()
+        DataManager.websites.append(asdf)
+        DataManager.websites.append(jkl)
+        
+        DataManager.generateJSON(path: URL(fileURLWithPath: "/Users/Nate/Desktop"))
+        
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {

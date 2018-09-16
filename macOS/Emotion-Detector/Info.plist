@@ -32,5 +32,12 @@
 	<true/>
 	<key>NSAppleEventsUsageDescription</key>
 	<string>pls</string>
+	<key>NSCameraUsageDescription</key>
+	<string>to spy on you</string>
+    <key>NSAppTransportSecurity</key>
+    <dict>
+        <key>NSAllowsArbitraryLoads</key>
+        <true/>
+    </dict>
 </dict>
 </plist>
